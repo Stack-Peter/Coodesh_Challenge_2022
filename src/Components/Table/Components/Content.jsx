@@ -1,8 +1,6 @@
 import React from "react";
-import { GlobalContext } from "../../../Context";
 
 const Content = ({ allPacients, filteredPacients, handleView, handleData }) => {
-  const { inputVal } = React.useContext(GlobalContext);
   let pacientsToShow;
   filteredPacients.length >= 1
     ? (pacientsToShow = filteredPacients)

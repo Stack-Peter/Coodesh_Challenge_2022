@@ -1,8 +1,11 @@
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/solid";
+import { GlobalContext } from "../../../Context";
 
 export default function Popup({ isOpen = false, closeModal, pacient, handleData }) {
+
+  const { suaURL } = React.useContext(GlobalContext)
 
   function handleClick(pacient) {
     let copyText = "";
